@@ -11,8 +11,8 @@ npm install
 
 ### Edit config files (server/bin/config.json and .env.local)
 ```
-mv server/bin/config.json.example server/bin/config.json
-mv .env.example .env.local && cp .env.local .env.prod
+cp server/bin/config.json.example server/bin/config.json
+cp .env.example .env.local && cp .env.local .env.prod
 ```
 
 ### Compiles and minifies for production
