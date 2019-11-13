@@ -14,7 +14,13 @@ class FormTable extends React.Component {
   renderTable = () => {
     const { table } = this.props.tableStore;
 
-    if (table.length && !this.props.isLoading) {
+    if (this.props.isLoading) {
+      return (
+        <TableRow>
+          <TableCell component="th" scope="row" align="center"><CircularProgress /></TableCell>
+        </TableRow>
+      )
+    } else if (table.length) {
       return table.map(row => {
         return (
           <TableRow key={row.id}>
@@ -22,12 +28,6 @@ class FormTable extends React.Component {
           </TableRow>
         );
       });
-    } else {
-      return (
-        <TableRow>
-          <TableCell component="th" scope="row" align="center"><CircularProgress /></TableCell>
-        </TableRow>
-      )
     }
   }
 
