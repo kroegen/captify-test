@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'mobx-react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
+import stores from './stores';
+import MainContainer from './containers/Main';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// in case of stylings
+const muiTheme = createMuiTheme();
+
+class App extends React.Component {
+  render() {
+    return (
+      <Provider {...stores}>
+        <MuiThemeProvider theme={muiTheme}>
+          <CssBaseline />
+          <MainContainer />
+        </MuiThemeProvider>
+      </Provider>
+    );
+  }
 }
 
 export default App;

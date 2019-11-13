@@ -1,5 +1,43 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Configuration and running
+
+## Project setup
+Before running app install dependencies and check config files
+
+```
+npm install
+```
+
+### Edit config files (server/bin/config.json and .env.local)
+```
+mv server/bin/config.json.example server/bin/config.json
+mv .env.example .env.local && cp .env.local .env.prod
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run server
+```
+npm run server
+```
+
+### See http://localhost:3001
+
+## Compiles and hot-reloads for development
+```
+// (for fe)
+npm run start
+// (for be) in other tab
+npm run server
+```
+### See http://localhost:3000
+
+# Create React App stuff down here
+
 ## Available Scripts
 
 In the project directory, you can run:
