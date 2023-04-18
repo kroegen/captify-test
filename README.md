@@ -7,6 +7,8 @@ This test is a full-stack app made with material-ui + react + mobx and express +
 A simple todo list table with rows stored in a db on be side
 ```
 
+![Screenshot](public/info.png?raw=true "Screenshot")
+
 ## Project setup
 Before running app install dependencies and check config files
 
