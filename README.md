@@ -2,6 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Configuration and running
 
+```
+This test is a full-stack app made with material-ui + react + mobx and express + mongoose.
+A simple todo list table with rows stored in a db on be side
+```
+
 ## Project setup
 Before running app install dependencies and check config files
 
